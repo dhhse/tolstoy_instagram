@@ -1,0 +1,40 @@
+Поле КАМИС	Описание в рубрикаторе КАМИС	Элемент TEI	Ссылка на документацию	Ссылка на пример использования	Комментарий
+ATRIB	Атрибуция	см. комментарий			не использован в метаданных
+AUTHOR	Автор c инициалами	<author>	https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-author.html		
+AUTHORF	Автор с именем и отчеством	<author>	https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-author.html		
+AUTHORR	Автор с ролью	<author>	https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-author.html		
+COLPR	Кол-во ед.	см. комментарий			не использован в метаданных
+COMM	Комментарий	см. комментарий			не использован в метаданных
+COMPNAM	Уточнение названия /изображённые лица	<persName> или <addName> и могут быть  <roleName>	https://tei-c.org/release/doc/tei-p5-doc/en/html//ref-persName.html https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-addName.html  https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-roleName.html 	https://www.tei-c.org/release/doc/tei-p5-doc/en/html/examples-addName.html , https://tei-c.org/release/doc/tei-p5-doc/en/html//examples-persName.html , https://tei-c.org/release/doc/tei-p5-doc/en/html/examples-roleName.html 	
+CONNEC	Связь с другими предметами	см. комментарий			не использован в метаданных
+CREAT	Время создания	<date>	https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-date.html		
+CREAT1	Время созд. (начало интервала)	"<date type=""notBefore"">"			точно видела такое использование в RusDraCor
+CREAT2	Время созд. (конец интервала)	"<date type=""notAfter"">"			точно видела такое использование в RusDraCor
+DEFPNAM	Наименование+название+комм.к назв.	"<title type=""comment"">"	https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-title.html		для просто названия есть тег PNAM
+DESCM	Материал, техника	<material>, для техники можно использовать <objectType>	https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-material.html	https://www.tei-c.org/release/doc/tei-p5-doc/en/html/examples-material.html	строго говоря, это там в основном было для манускриптов
+DESCRI	Описание	<desc>	https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-desc.html	https://www.tei-c.org/release/doc/tei-p5-doc/en/html/examples-desc.html	
+ENDAT	Год поступления	"<date type=""arrival"">"	https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-date.html		
+ENDAT1	Год поступл. (начало интервала)	"<date type=""arrival notBefore"">"	https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-date.html		
+ENDAT2	Год поступл. (конец интервала)	"<date type=""arrival notAfter"">"	https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-date.html		
+GEOGR	Место создания	<origPlace>	https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-origPlace.html	https://www.tei-c.org/release/doc/tei-p5-doc/en/html/examples-origPlace.html	
+IDENTIF	№  КП	<institution>	https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-institution.html	https://www.tei-c.org/release/doc/tei-p5-doc/en/html/examples-institution.html	мне кажется, это самое подходящее из возможного..
+INSCR	Надписи, подписи, клейма, марки	<object> или <metamark>	https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-object.html , https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-metamark.html 	https://www.tei-c.org/release/doc/tei-p5-doc/en/html/examples-object.html	
+INV	Инв.номер	<number>	https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-number.html	https://www.tei-c.org/release/doc/tei-p5-doc/en/html/examples-number.html	но это не точно
+IWAY	Способ поступления	<acquisition>	https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-acquisition.html	https://www.tei-c.org/release/doc/tei-p5-doc/en/html/examples-acquisition.html	
+IZGOT	Организации-изготовители	<distributor>	https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-distributor.html	https://www.tei-c.org/release/doc/tei-p5-doc/en/html/examples-distributor.html	не совсем уверена
+LEGENDA	История создания и бытования	<history> но есть нюанс	https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-history.html	https://www.tei-c.org/release/doc/tei-p5-doc/en/html/examples-history.html	не использован в метаданных (но я нашла соответствие до обнаружения этого факта, оставить или нет?)
+NCOMP	Комплект	<source>	https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-source.html	https://www.tei-c.org/release/doc/tei-p5-doc/en/html/examples-source.html	снова не уверена
+NDEFWD	Наименование предмета	см. комментарий			не использован в метаданных
+NFOND	Фонд, коллекция	<collection>	https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-collection.html	https://tei-c.org/release/doc/tei-p5-doc/en/html/examples-collection.html	
+NOMGC	№ по ГК	"
+<number>"	https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-number.html	https://www.tei-c.org/release/doc/tei-p5-doc/en/html/examples-number.html	не использован в метаданных
+PNAM	Название	<objectName>	https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-objectName.html	https://www.tei-c.org/release/doc/tei-p5-doc/en/html/examples-objectName.html	не использован в метаданных
+PROISX	Происхождение	"
+<origin> "	https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-origin.html	https://www.tei-c.org/release/doc/tei-p5-doc/en/html/examples-origin.html	не использован в метаданных
+SIZES	Размеры	<dimensions>	https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-dimensions.html	https://www.tei-c.org/release/doc/tei-p5-doc/en/html/examples-dimensions.html	
+SODERG	Содержание - общая характеристика	см. комментарий			"вот этот тэг ни разу не использован в метаданных; стоит ли искать соответствие?"
+SPIEX	Выставки	<authority> (возможно)	https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-authority.html		"этот элемент нужен, чтобы обозначить ""the name of a person or other agency responsible for making a work available, other than a publisher or distributor"", то есть, возможно, его можно использовать для обозначения выставок"
+SPILIT	Литература	см. комментарий			и этот тож не был использован
+SPIPERS	Персоналии	см. комментарий			и даже этот тэг ни разу не использован, вопрос тот же, что и к SPILET (ответ: нет, не стоит искать соответствие)
+SPIRUBR	Список тематических рубрик	<category>	https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-category.html		
+VLAD	Сдатчик	<publisher>	https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-publisher.html		
