@@ -1,47 +1,50 @@
-<teiHeader>
-    <fileDesc>
-        <titleStmt>
-            <title></title> <!-- название фотографии:  -->
-            <author></author> <!-- автор фотографии: AUTHOR / AUTHORR / AUTHORF -->
-            <respStmt> <!-- кто писал TEI -->
-                <!-- TODO: заполнить это поле -->
-            </respStmt>
-            <funder>Государственный музей Л.Н. Толстого</funder> <!-- от кого фотографии -->
-        </titleStmt>
-        <publicationStmt>
-            <acquisition></acquisition> <!-- способ поступления (IWAY) -->
-            <date type="arrival"></date> <!-- дата поступления: ENDAT / ENDAT1 / ENDAT2 -->
-            <collection></collection> <!-- коллекция (NFOND) -->
-            <idno type="identif"></idno> <!-- музейные пометы: № КП (IDENTIF) -->
-            <idno type="inv"></idno> <!-- музейные пометы: инвентарный номер (INV) -->
-            <category></category> <!-- список тематических рубрик (SPIRUBR) -->
-            <publisher></publisher> <!-- сдатчик (VLAD) -->
-        </publicationStmt>
-        <sourceDesc>
-            <!-- информация об источнике фотографии (музейные данные) -->
-            <origPlace></origPlace> <!-- где cделана фотография (GEOGR) -->
-            <date type="created"></date> <!-- когда сделана фотография: CREAT / CREAT1 / CREAT2 -->
-            <distributor></distributor> <!-- организация-изготовитель (IZGOT) -->
-            <source></source> <!-- комплект (NCOMP) -->
-            <dimensions> <!-- размеры -->
-                <width></width>
-                <height></height>
-            </dimensions>
-            <desc></desc> <!-- описание (DESC) -->
-            <metamark></metamark> <!-- надписи, подписи, клейма, марки (INSCR) -->
-        </sourceDesc>
-    </fileDesc>
-    <encodingDesc>
-        <!-- информация о кодировании/оцифровке фотографии -->
-    </encodingDesc>
-    <profileDesc>
-        <!-- информация о фотографии -->
-        <persName></persName> <!-- уточнение названия, изображённые лица (COMPNAM) -->
-        <material></material> <!-- материал, техника (DESCM) -->
-        <remarks></remarks> <!-- материал + название + комментарий (DEFPNAM) -->
-    </profileDesc>
-    <revisionDesc>
-        <!-- правки и изменения в XML-файле -->
-        <change when="2020-04-15">[cr] initial KAMIS metadata conversion</change>
-    </revisionDesc>
-</teiHeader>
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="rus">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title></title> <!-- название фотографии:  -->
+                <author></author> <!-- автор фотографии: AUTHOR / AUTHORR / AUTHORF -->
+                <respStmt> <!-- кто писал TEI -->
+                    <!-- TODO: заполнить это поле -->
+                </respStmt>
+                <funder>Государственный музей Л.Н. Толстого</funder> <!-- от кого фотографии -->
+            </titleStmt>
+            <publicationStmt>
+                <acquisition></acquisition> <!-- способ поступления (IWAY) -->
+                <date type="arrival"></date> <!-- дата поступления: ENDAT / ENDAT1 / ENDAT2 -->
+                <collection></collection> <!-- коллекция (NFOND) -->
+                <idno type="identif"></idno> <!-- музейные пометы: № КП (IDENTIF) -->
+                <idno type="inv"></idno> <!-- музейные пометы: инвентарный номер (INV) -->
+                <category></category> <!-- список тематических рубрик (SPIRUBR) -->
+                <publisher></publisher> <!-- сдатчик (VLAD) -->
+            </publicationStmt>
+            <sourceDesc>
+                <!-- информация об источнике фотографии (музейные данные) -->
+                <origPlace></origPlace> <!-- где cделана фотография (GEOGR) -->
+                <date type="created"></date> <!-- когда сделана фотография: CREAT / CREAT1 / CREAT2 -->
+                <distributor></distributor> <!-- организация-изготовитель (IZGOT) -->
+                <source></source> <!-- комплект (NCOMP) -->
+                <dimensions> <!-- размеры -->
+                    <width></width>
+                    <height></height>
+                </dimensions>
+                <desc></desc> <!-- описание (DESC) -->
+                <metamark></metamark> <!-- надписи, подписи, клейма, марки (INSCR) -->
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <!-- информация о кодировании/оцифровке фотографии -->
+        </encodingDesc>
+        <profileDesc>
+            <!-- информация о фотографии -->
+            <persName></persName> <!-- уточнение названия, изображённые лица (COMPNAM) -->
+            <material></material> <!-- материал, техника (DESCM) -->
+            <remarks></remarks> <!-- материал + название + комментарий (DEFPNAM) -->
+        </profileDesc>
+        <revisionDesc>
+            <!-- правки и изменения в XML-файле -->
+            <change when="2020-04-15">[cr] initial KAMIS metadata conversion</change>
+        </revisionDesc>
+    </teiHeader>
+</TEI>
