@@ -1,5 +1,5 @@
 import os
-# import shutil
+import re
 import zipfile
 
 from shutil import Error as shError
@@ -81,10 +81,11 @@ def remove_prefixes(folder):
     :param folder: (str) папка
     :return: None
     """
+    reg_photo_prefix = re.compile("image[12]_")
     for photo_name in os.listdir(folder):
         if photo_name != ".DS_Store":
             old_name = os.path.join(folder, photo_name)
-            new_name = os.path.join(folder, photo_name[7:])
+            new_name = os.path.join(folder, reg_photo_prefix.sub("", photo_name))
             os.rename(old_name, new_name)
 
 
@@ -170,7 +171,7 @@ def main():
     remove_prefixes("./data/fullsize")
     remove_prefixes("./data/miniatures")
     # проверка
-    check_presence("./data/kamis")
+    # check_presence("./data/kamis")
 
 
 if __name__ == "__main__":
