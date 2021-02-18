@@ -21,7 +21,7 @@ def parse_photo_desc(item, info, kamis_tags):
     info["id"].append(item[:-4])
     for kamis_tag in kamis_tags:
         try:
-            value = soup.find(kamis_tag.lower()).get_text(strip=True)
+            value = soup.find(kamis_tag.lower()).get_text(strip=True).replace("\n", "")
         except:
             value = -1
         info[kamis_tag].append(value)
@@ -48,7 +48,7 @@ def save_as_csv(info):
 def main():
     kamis_tags = ["AUTHOR", "COMPNAM", "CREAT", "CREAT1", "CREAT2", "DESCRI",
                   "GEOGR", "IDENTIF", "INSCR", "INV", "IWAY", "IZGOT", "NCOMP",
-                  "NFOND", "SIZES", "SPIEX", "SPIRUBR", "VLAD"]
+                  "NFOND", "PNAM", "SIZES", "SPIEX", "SPIRUBR", "VLAD"]
     info = {t: [] for t in kamis_tags}
     info["id"] = []
     files_to_parse = [x for x in os.listdir("./data/kamis")
