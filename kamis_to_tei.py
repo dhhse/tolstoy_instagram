@@ -1,6 +1,7 @@
 import re
 import pandas as pd
 
+from cgi import escape
 from lxml import etree
 from tqdm import tqdm
 
@@ -12,7 +13,7 @@ def assemble_title_stmt(row_dict):
     :return: titleStmt: (str) описание в TEI
     """
     if row_dict["AUTHOR"] != "-1":
-        author = "<author>{}</author>".format(row_dict["AUTHOR"])
+        author = "<author>{}</author>".format(escape(row_dict["AUTHOR"]))
     else:
         author = ""
     funder = "<funder>Государственный музей Л.Н. Толстого</funder>"
@@ -58,11 +59,11 @@ def extract_creat(row_dict):
     if row_dict["CREAT"] == "-1":
         dateCreat = ""
         if row_dict["CREAT1"] != "-1":
-            dateCreat += "<date type=\"created notBefore\">{}</date>".format(row_dict["CREAT1"])
+            dateCreat += "<date type=\"created notBefore\">{}</date>".format(escape(str(row_dict["CREAT1"])))
         if row_dict["CREAT2"] != "-1":
-            dateCreat += "<date type=\"created notAfter\">{}</date>".format(row_dict["CREAT2"])
+            dateCreat += "<date type=\"created notAfter\">{}</date>".format(escape(str(row_dict["CREAT2"])))
     else:
-        dateCreat = "<date type=\"created\">{}</date>".format(row_dict["CREAT"])
+        dateCreat = "<date type=\"created\">{}</date>".format(escape(row_dict["CREAT"]))
     return dateCreat
 
 
@@ -92,7 +93,7 @@ def assemble_source_desc(row_dict, reg_sizes):
     origPlace = "<origPlace>{}</origPlace>".format(row_dict["GEOGR"]) \
         if row_dict["GEOGR"] != "-1" else ""
     dateCreat = extract_creat(row_dict)
-    distributor = "<distributor>{}</distributor>".format(row_dict["IZGOT"]) \
+    distributor = "<distributor>{}</distributor>".format(escape(row_dict["IZGOT"])) \
         if row_dict["IZGOT"] != "-1" else ""
     source = "<source>{}</source>".format(row_dict["NCOMP"]) \
         if row_dict["NCOMP"] != "-1" else ""
@@ -104,7 +105,7 @@ def assemble_source_desc(row_dict, reg_sizes):
             dimensions = ""
     else:
         dimensions = ""
-    desc = "<desc>{}</desc>".format(row_dict["COMPNAM"]) \
+    desc = "<desc>{}</desc>".format(escape(str(row_dict["COMPNAM"]))) \
         if row_dict["COMPNAM"] != "-1" else ""
     metamark = "<metamark>{}</metamark>".format(row_dict["INSCR"]) \
         if row_dict["INSCR"] != "-1" else ""
@@ -128,7 +129,7 @@ def load_data():
 
     :return: df: (pd.DataFrame) - метаданные
     """
-    df = pd.read_csv("./data/metadata.tsv", sep="\t", encoding="utf-8")
+    df = pd.read_csv("./data/metadata_kamisHeader.tsv", sep="\t", encoding="utf-8")
     df["id"] = df["id"].astype("str").apply(lambda x: "0" * (8 - len(x)) + x)
     return df
 
